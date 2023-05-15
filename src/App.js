@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import CurrentToken from "./pages/CurrentToken";
+import TokenDashboard from "./pages/TokenDashboard";
+import NoPage from "./pages/NoPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/current-token" element={<CurrentToken />} />
+				<Route path="/token-dashboard" element={<TokenDashboard />} />
+				<Route path="*" element={<NoPage />} />
+			</Routes>
+		</BrowserRouter>
+	);
 }
 
 export default App;

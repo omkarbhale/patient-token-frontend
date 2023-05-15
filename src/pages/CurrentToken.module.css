@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.card {
+    /* border: 1px solid rgba(0, 0, 0, 0.492); */
+    box-shadow: 1px 0px 12px 4px rgb(233, 233, 233);
+    margin: 2rem;
+    padding: .4rem 2rem;
+    border-radius: 6px;
+}
+
+.tokentext {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.socketstatus {
+    font-size: 1.2rem;
+    margin: .5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: rgb(255, 65, 65);
+    padding: 8px 12px;
+    transition: background-color .5s ease-in-out;
+}
+
+.connected {
+    background-color: rgb(65, 255, 65);
+}
